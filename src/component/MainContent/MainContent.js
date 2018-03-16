@@ -3,21 +3,71 @@ import React from "react";
 
 
 
-var mainstyle={
-    margin:'20px',
-  padding:"10px",
- "fontSize" :'16px',
- "borderRadius":"5px",
- background:"#1abc9c",
-  
-}
 
-class MainContent extends React.Component{
-    render(){
-        return(
-            <div style={mainstyle}>
-  hello,girl!!!
-               
+class MainContent extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            idx: 0
+        }
+    }
+
+    tabClick = (index) => {
+        this.setState({
+            idx: index,
+        })
+    }
+    render() {
+        const tab = [
+            {
+                tab_txt: "全部",
+            },
+            {
+                tab_txt: "已取消",
+            }, {
+                tab_txt: "已结束",
+            }
+        ]
+        const content = [
+            {
+                item: "内容1"
+            }, {
+                item: "内容2"
+            }
+            , {
+                item: "内容3"
+            }
+        ]
+
+        return (
+            <div className="tab_block">
+
+
+                <div className="tab" >
+                    <ul>
+                        {
+                            tab.map((item, index) => {
+                                return (
+                                    <li key={index} onClick={() => this.tabClick(index)} className={this.state.idx === index ? "current" : " "}>
+                                        {item.tab_txt}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+
+                <div className="tab_content">
+                    {
+                        content.map((item, index) => {
+                            return (
+                                <div key={index}>
+                                    {item.item}
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         )
     }

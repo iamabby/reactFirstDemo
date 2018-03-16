@@ -1,5 +1,25 @@
 body {
+  font-family: "microsoft yahei";
   background: #fff;
+}
+ul,
+div,
+table,
+td,
+tr,
+th,
+ol {
+  margin: 0;
+  padding: 0;
+}
+ul li,
+div li,
+table li,
+td li,
+tr li,
+th li,
+ol li {
+  list-style: none;
 }
 .block_ul {
   position: fixed;
@@ -30,4 +50,27 @@ body {
   display: block;
   width: 100%;
   margin-top: 20px;
+}
+.tab_block {
+  margin: 20px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+}
+.tab {
+  background: #1abc9c;
+}
+.tab ul {
+  width: 100%;
+  display: table;
+}
+.tab ul li {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  color: #fff;
+  box-sizing: border-box;
+}
+.tab li.current {
+  color: #1abc9c;
+  background: #fff;
 }
