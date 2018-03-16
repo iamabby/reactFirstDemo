@@ -1,0 +1,33 @@
+body {
+  background: #fff;
+}
+.block_ul {
+  position: fixed;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #f8f8f8;
+}
+.block_ul ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.block_ul ul li {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.block_ul li.active {
+  color: aquamarine;
+}
+.testContent {
+  margin: 20px;
+}
+.pic {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
