@@ -61,7 +61,7 @@ class MainContent extends React.Component {
                     {
                         content.map((item, index) => {
                             return (
-                                <div key={index}>
+                                <div key={index} className={this.state.idx === index ? "dis_block" : " "}>
                                     {item.item}
                                 </div>
                             )
