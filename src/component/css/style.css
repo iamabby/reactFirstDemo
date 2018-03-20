@@ -74,3 +74,12 @@ ol li {
   color: #1abc9c;
   background: #fff;
 }
+.tab_content div {
+  display: none;
+}
+.tab_content .dis_block {
+  display: block;
+}
+.link_to {
+  color: #fff;
+}

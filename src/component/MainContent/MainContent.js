@@ -61,13 +61,14 @@ class MainContent extends React.Component {
                     {
                         content.map((item, index) => {
                             return (
-                                <div key={index}>
+                                <div key={index} className={this.state.idx===index?"dis_block":""} >
                                     {item.item}
                                 </div>
                             )
                         })
                     }
                 </div>
+                <a href="./../Index/Index" className="link_to">单击页面跳转</a>
             </div>
         )
     }
